@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <input type="text" id=minAlder>
+
+    <button>klig for at se din tilladte date-alder</button>
+
+    <script>
+        let minAlder;
+        let resultat;
+        let kommentar;
+
+
+
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+
+
+            minAlder = document.querySelector("#minAlder").value;
+
+            resultat = minAlder / 2 + 7;
+
+
+            if (resultat <= 15) {
+                kommentar = "din mindste alder er 15";
+            } else {
+                kommentar = "din mindste alder er " + resultat;
+            }
+
+
+
+
+            console.log(kommentar);
+
+
+        }
+    </script>
+</body></html>
