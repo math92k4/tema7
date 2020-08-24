@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <input type="text" id=timer>
+
+    <button>Klik og kig i konsollen</button>
+
+    <script>
+        let co2Kg;
+        let timer;
+        let kommentar;
+
+
+
+        document.querySelector("button").addEventListener("click", udregning);
+
+        function udregning() {
+            timer = document.querySelector("#timer").value;
+
+            co2Kg = timer * 109;
+
+
+            if (co2Kg < 100) {
+                kommentar = "Tæt på Thunberg";
+            } else if (co2Kg < 200) {
+                kommentar = "Ja ja, du behøver ikke melde dig ud af Å";
+            } else if (co2Kg < 600) {
+                kommentar = "Det er godt for turismen i noreuropa";
+            } else {
+                kommentar = "Nå ja vi kan jo aldid kolonisere en anden planet";
+            }
+
+
+
+
+
+
+
+            console.log(kommentar);
+
+
+
+
+        }
+    </script>
+</body></html>
