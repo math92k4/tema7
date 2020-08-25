@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        article {
+            flex-basis: 400px;
+        }
+
+        footer,
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+
+        <section>
+
+            <article>
+                <img src="https://placeimg.com/400/400/any" alt="">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nostrum, facilis porro, doloribus doloremque dolores velit placeat earum quaerat, deserunt, minus odio atque neque numquam mollitia! A, iusto optio sapiente.</p>
+
+            </article>
+
+
+            <article>
+                <img src="https://placeimg.com/400/400/arch" alt="">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quibusdam odio minima, aperiam ad. Ipsum saepe perferendis ea assumenda cupiditate vitae architecto necessitatibus rem ab dolorum, voluptatibus sequi placeat facere!</p>
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <footer>Dette er en footer</footer>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            console.log("load");
+
+
+            const overskrift = document.querySelector("h1");
+            console.log(overskrift.textContent);
+
+            const underTitel = document.querySelector("h2");
+            console.log(underTitel.textContent);
+
+
+            const underOverskrift1 = document.querySelector("article h3");
+
+            console.log(underOverskrift1.textContent);
+
+
+            const tekst1 = document.querySelector("article p");
+            console.log(tekst1.textContent);
+
+
+            const underOverskrift2 = document.querySelector("article:nth-child(2) h3");
+            console.log(underOverskrift2.textContent);
+
+            const tekst2 = document.querySelector("article:nth-child(2) p");
+            console.log(tekst2.textContent);
+
+
+
+            overskrift.textContent = "En redigeret overskrift"
+
+            underOverskrift1.textContent = "redigeret underoverskrift1"
+
+            underOverskrift2.textContent = "Det virker os i article 2"
+
+            tekst1.innerHTML = "<b>Nu er teksten med feeeed</b>"
+
+            tekst2.textContent = "hahahahahahahahahahahahahhahahahahahahahahahah"
+
+            underTitel.textContent = "med løg på"
+
+
+
+
+            const pic1 = document.querySelector("article:nth-child(1) img");
+
+            const pic2 = document.querySelector("article:nth-child(2) img");
+
+            pic1.src = "https://placeimg.com/400/400/arch/sepia";
+            pic2.src = "https://placeimg.com/400/400/arch/sepia"
+
+            pic1.alt = "javascript ændrer html"
+            pic2.alt = "javascript ændrer html igen igen"
+
+
+
+
+
+
+            //oprettelse af ny article med overskrift
+
+            let mainSection = document.querySelector("section");
+            let newArticle = document.createElement("article");
+            let newOverskrift = document.createElement("h3");
+
+            //indsæt tekst i overskrift
+            let newOverskriftText = document.createTextNode("Article 3");
+
+            //tilføj overskrift til article
+            newOverskrift.appendChild(newOverskriftText);
+            newArticle.appendChild(newOverskrift);
+
+
+            //Tilføj article til section
+            mainSection.appendChild(newArticle);
+
+
+        }
+
+    </script>
+</body>
+
+</html>
