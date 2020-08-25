@@ -29,17 +29,22 @@
 
 
 
-            antalGæt++;
+
 
             if (mitGæt < tallet) {
                 kommentar = "for lavt";
+                antalGæt++;
             } else if (mitGæt > tallet) {
                 kommentar = "for højt";
+                antalGæt++;
             } else {
                 kommentar = "korrekt, du brugte " + antalGæt + " forsøg";
             }
 
             console.log(kommentar);
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
