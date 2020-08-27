@@ -58,13 +58,13 @@
                     "navn": "sild",
                     "type": "fisk",
                     "levested": "vand",
-                    "billede": "http://mabe-kea.dk/E19/pics/sild.png"
+                    "billede": "http://mabe-kea.dk/E19/pics/sild.jpg"
 
                 }, {
                     "navn": "krokodille",
                     "type": "krybdyr",
                     "levested": "ik i dk",
-                    "billede": "http://mabe-kea.dk/E19/pics/kroko.png"
+                    "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg"
 
                 }
 
@@ -76,8 +76,9 @@
             const listevisning = document.querySelector("#liste");
 
             dyr.forEach(dyr => {
-                listevisning.innerHTML += `<p>${dyr.navn} ${dyr.type} ${dyr.levested}</p>`
+                listevisning.innerHTML += `<p>${dyr.navn} ${dyr.type} ${dyr.levested}</p> <img src="${dyr.billede}" alt="">`
             });
+
 
 
 
@@ -112,8 +113,5 @@
 
 
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
