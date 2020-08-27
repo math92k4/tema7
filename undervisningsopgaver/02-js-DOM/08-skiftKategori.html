@@ -22,6 +22,7 @@
         h2 {
             text-align: center;
         }
+
     </style>
 </head>
 
@@ -176,13 +177,18 @@
             function skift() {
 
                 const nummer = Math.round(Math.random() * 4);
-                pic2.src = "https://placeimg.com/400/400/" + nummer;
-                pic2.alt = nummer;
+                pic2.src = "https://placeimg.com/400/400/" + billedeKategori[nummer];
+                pic2.alt = billedeKategori[nummer];
+
+                console.log(billedeKategori[nummer]);
 
             }
 
 
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
