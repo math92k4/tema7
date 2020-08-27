@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <button></button>
+    <img src="" alt="">
+
+
+
+
+    <script>
+        let billedeSkift = ["https://picsum.photos/id/1/200/300", "https://picsum.photos/id/0/200/300", "https://picsum.photos/id/10/200/300"];
+        let tal = 0;
+
+
+        const knap = document.querySelector("button");
+        const billede = document.querySelector("img");
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            knap.textContent = "nyt billede";
+            billede.src = billedeSkift[tal];
+
+
+            knap.addEventListener("click", skiftBillede);
+
+
+
+
+
+
+
+
+
+            function skiftBillede() {
+
+                console.log("skiftBillede");
+
+
+                if (tal == 1) {
+                    tal++;
+                    knap.textContent = "forfra";
+                    billede.src = billedeSkift[tal];
+                    tal = -1;
+                } else {
+                    tal++;
+                    knap.textContent = "nyt billede";
+                    billede.src = billedeSkift[tal];
+                }
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+</body></html>
