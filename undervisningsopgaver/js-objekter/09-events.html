@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    article {
+        margin: 10px;
+        border: 1px solid black;
+        flex-basis: 300px;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-family: sans-serif;
+        padding: 10px 0px 10px 10px
+    }
+
+    p {
+        font-size: 13px;
+        color: grey;
+        font-family: sans-serif;
+        padding: 0px 10px 10px 10px
+    }
+</style>
+
+<body>
+
+    <section id=liste></section>
+
+
+    <template>
+        <article>
+            <img src="" alt="">
+            <h2></h2>
+            <p class="beskrivelse"></p>
+        </article>
+    </template>
+
+
+
+
+
+
+
+
+
+    <script>
+        let film = [{
+            "film": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/W6dOqabNhHKBPXxxKKEZRA84-360.jpg",
+            "navn": "A Calling",
+            "forfatter": "Christian Bengtson",
+            "land": "Danmark",
+            "længde": "20 min",
+            "aar": "2019"
+        }, {
+            "film": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/Q8K1pZrOs03Q0IrDkBwGVu5r-360.jpg",
+            "navn": "A Hole In My Heart",
+            "forfatter": "Mees Peijnenburg",
+            "land": "Holland",
+            "længde": "9 min",
+            "aar": "2015"
+        }, {
+            "film": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/W6dOqabNhHKBPXxxKKEZRA84-360.jpg",
+            "navn": "A Place in the sun",
+            "forfatter": "Christian Zipfel",
+            "land": "Tyskland",
+            "længde": "20 min",
+            "aar": "2018"
+        }, {
+            "film": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/Q8K1pZrOs03Q0IrDkBwGVu5r-360.jpg",
+            "navn": "A Tower of Two",
+            "forfatter": "Jacob Krysztof",
+            "land": "Danmark",
+            "længde": "21 min",
+            "aar": "2019"
+        }]
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+
+
+
+
+        function start() {
+
+
+            let container = document.querySelector("section");
+            let temp = document.querySelector("template");
+
+            film.forEach(enFilm => {
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("img").src = enFilm.film;
+                klon.querySelector("h2").textContent = enFilm.navn;
+                klon.querySelector(".beskrivelse").textContent = `${enFilm.forfatter} | ${enFilm.land} | ${enFilm.længde} | ${enFilm.aar}`;
+                container.appendChild(klon);
+
+            })
+        }
+    </script>
+</body></html>
