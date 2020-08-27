@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        body {
+            color: burlywood;
+
+        }
+
+
+        #display {
+            width: 20vw;
+            height: 20vw;
+            border: 1px solid silver;
+            margin 7vw;
+            padding: 1vw;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="display"></div>
+
+
+
+    <script>
+        let playlist = ["Hey jude", "Køb bananer", "ikk lavet peng", "POP", "Wonderwall", "Let it be", "strwberry fields", "Boing", "YOYO", "Candy Shop"];
+
+        playlist.forEach(sang => {
+            document.querySelector("#display").innerHTML += `${sang} <br>`
+        })
+    </script>
+
+
+</body></html>
