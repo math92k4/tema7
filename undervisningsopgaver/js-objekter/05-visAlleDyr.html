@@ -75,7 +75,7 @@
 
             const listevisning = document.querySelector("#liste");
 
-            dyr.forEach(Dyr => {
+            dyr.forEach(dyr => {
                 listevisning.innerHTML += `<p>${dyr.navn} ${dyr.type} ${dyr.levested}</p> <img src="${dyr.billede}" alt="">`
             });
 
