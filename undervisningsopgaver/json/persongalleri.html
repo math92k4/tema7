@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <title>JS Objekter</title>
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+
+        section {
+            width: 90vw;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
         article {
             border: 1px solid #333;
-            padding: 10px;
         }
 
         img {
-            max-width: 30%;
+            width: 100%;
+        }
+
+
+        p {
+            margin: 10px 0 0 10px;
+            font-family: sans-serif;
+        }
+
+        h2 {
+            margin: 10px 0 0 10px;
+            font-family: sans-serif;
         }
     </style>
 </head>
@@ -24,9 +51,8 @@
     <template>
         <article>
             <h2></h2>
+            <h2 class="navn"></h2>
             <img src="" alt="">
-            <p class="navn">Navn: </p>
-            <p class="efternavn">Efternavn: </p>
             <p class="køn">Køn: </p>
             <p class="alder">Alder: </p>
             <p class="religion">Religion: </p>
@@ -71,8 +97,7 @@
             personer.feed.entry.forEach(person => {
 
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector(".navn").textContent += person.gsx$navn.$t;
-                klon.querySelector(".efternavn").textContent += person.gsx$efternavn.$t;
+                klon.querySelector(".navn").textContent = `${person.gsx$navn.$t} ${person.gsx$efternavn.$t}`;
                 klon.querySelector(".alder").textContent += person.gsx$alder.$t;
                 klon.querySelector(".køn").textContent += person.gsx$køn.$t;
                 klon.querySelector(".religion").textContent += person.gsx$religion.$t;
